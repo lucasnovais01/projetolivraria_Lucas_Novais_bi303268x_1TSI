@@ -8,13 +8,12 @@
 /* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
 /* --HEADER-- */
 #topo {
-    background-color: burlywood;
+    background-image: linear-gradient(to right, #ffcc00, #ff6666);
 }
 #logo {
     background-color: black;
     background-image: url("../images/logo\ html\ 5\ modificado.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
     width:  150px;
     height: 150px;
@@ -28,6 +27,10 @@
 
 
 /* campo de testes:
+
+Como colocar gradiente:
+background-image: linear-gradient(to right, #ffcc00, #ff6666);
+
 
 body {
     background-image: url(../images/livro\ 3\ modificado\ 150-230.jpg);
