@@ -1,0 +1,38 @@
+/* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
+/* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
+/* --HEADER-- */
+#topo {
+    background-color: burlywood;
+}
+#logo {
+    background-color: black;
+    background-image: url("../images/logo\ html\ 5\ modificado.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width:  150px;
+    height: 150px;
+}
+/* --NAV-- */
+#menu {background-color: cyan;}
+/* No caso de uma class, usasse o ponto+nome da class */
+.destaque {
+    background-color: rgb(3, 180, 3, 0.5);
+}
+
+
+/* campo de testes:
+
+body {
+    background-image: url(../images/livro\ 3\ modificado\ 150-230.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+*/
