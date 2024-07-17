@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria São João</title>
     <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
@@ -19,11 +19,13 @@
     </header>
     <nav id="menu">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Livros</a></li>
+            <b>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="produtos.html">Livros</a></li>
             <li><a href="#">Promoções</a></li>
-            <li><a href="#">John & Paul</a></li>
-            <li><a href="#">Contatos</a></li>
+            <li><a href="sobre.html">John & Paul</a></li>
+            <li><a href="contato.html">Contatos</a></li>
+            </b>
         </ul>
     </nav>
     <!--O site picsum photos, pode ser usado pra gerar imagens aleatórios de tamanho pre-determinado, util na hora de criar um site-->
@@ -31,23 +33,48 @@
         <form action="#">
             <fieldset>
                 <legend>Contate-nos</legend>
-            </fieldset>
+            
     <!-- Usasse o form pra iniciar formulários, o maxleight é o número máximo de caracteres, readonly é pra travar o formulario-->
     <!-- lembrar de colocar dentro das <div></div> inicia-se com <label> a parte for="" é pra identificação, se colocar junto <id="">-->
     <!-- placeholder é a mensagem que aparece no campo para deixar intuitivo para a pessoa saber o que digitar-->
     <!-- required faz o campo obrigatório-->
     <div>
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" value="" maxlength="10" size="" placeholder="Digite seu nome" required id="nome">
+        <input type="text" name="nome" value="" maxlength="" size="" placeholder="digite seu nome" required id="nome">
     </div>
     <div>
         <label for="email">Email:</label>
-        <input type="email" name="email" id:"email">
+        <input type="email" name="email" placeholder="digite seu email" id:"email">
     </div>
     <div>
-        <label for="telefone">Telefone</label>
-        <input type="number" name="telefone" value="" maxlength="" size="" placeholder="Seu número de telefone" required id="telefone"
+        <label for="tel">Telefone</label>
+        <input type="tel" name="tel" value="" maxlength="" size="" placeholder="digite seu telefone" id="tel">
     </div>
+    <div>
+        <label for="assunto">Assunto</label>
+        <select for="assunto">Assunto</select>
+            <option value="1">Trocas</option>
+            <option value="2">Atendimento</option>
+            <option value="3">Comercia</option>
+            <option value="4">Outros</option>
+        </select>
+    </div>
+    <div>
+        <label for="mens">Deixe seu recado</label>
+    <br>
+        <textarea name="mens" id="mens" cols="30" row="10">
+        </textarea>
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Apagar</button>
+    </div>
+    <div>
+        <label for="mensagem">Mensagem</label>
+        <input type="text" name="mensagem" value="" maxlength="" size="" placeholder="" required id="mensagem">
+    </div>
+
+    </fieldset>
     </form>
 
     </main>

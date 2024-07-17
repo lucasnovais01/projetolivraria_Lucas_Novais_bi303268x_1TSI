@@ -8,34 +8,22 @@
 /* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
 /* --HEADER-- */
 #topo {
-    background-image: linear-gradient(to right, #ffcc00, #ff6666);
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
 }
-#logo {
-    background-color: black;
-    background-image: url("../images/logo\ html\ 5\ modificado.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width:  150px;
-    height: 150px;
-}
-/* --NAV-- */
-#menu {background-color: cyan;}
-/* No caso de uma class, usasse o ponto+nome da class */
-.destaque {
-    background-color: rgb(3, 180, 3, 0.5);
+#menu {
+    background: rgb(250,198,121);
+    background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
 }
 
+/* --MAIN -- */
 
-/* campo de testes:
-
-Como colocar gradiente:
-background-image: linear-gradient(to right, #ffcc00, #ff6666);
-
-
-body {
-    background-image: url(../images/livro\ 3\ modificado\ 150-230.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.destaques, .produtos, .sobre, .contato{
+    background: rgb(145,96,21);
+    background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
+}
+#rodape {
+    background-color: darkkhaki;
 }
 
-*/
+/* -------------NAV ------------------*/

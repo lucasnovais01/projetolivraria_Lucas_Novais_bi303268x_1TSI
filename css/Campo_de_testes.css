@@ -1,0 +1,47 @@
+/* Campo de testes CSS */
+
+/* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
+/* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
+/* --HEADER-- */
+
+/* --NAV-- */
+/* Na id usasse o # + nome da id */
+
+#menu {background-color: cyan;}
+
+/* No caso de uma class, usasse o ponto + nome da class, exemplo abaixo */
+
+.destaque {
+    background-color: rgb(3, 180, 3, 0.5);
+}
+
+/* Como colocar gradiente, o site https://cssgradient.io/ gera um comando de gradiente pra colocar nos eu css se vc quiser */
+/* Abaixo formas de colocar o background color no body, numa id e numa class */
+
+body {
+    background-image: url(../images/livro\ 3\ modificado\ 150-230.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    background-color: black;
+    background-image: url("../images/logo\ html\ 5\ modificado.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width:  150px;
+    height: 150px;
+}
+/* aplicando o gradiente: */
+.sobre {
+    background: rgb(244,207,152);
+    background: linear-gradient(90deg, rgba(244,207,152,1) 0%, rgba(145,96,21,1) 57%, rgba(0,0,0,1) 100%);
+}
+
+/* outro exemplo abaixo: */
