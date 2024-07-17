@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria São João</title>
+    <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
+    <header id="topo">
+        <h1>Livraria São João</h1>
+        <h2>"Livros novos e usados  com os melhores preços para você"</h2>
+        <div id="logo">
+            
+        </div>
+    </header>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Livros</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">John & Paul</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </nav>
+    <!--O site picsum photos, pode ser usado pra gerar imagens aleatórios de tamanho pre-determinado, util na hora de criar um site-->
+    <main class="contato">
+        <form action="#">
+            <fieldset>
+                <legend>Contate-nos</legend>
+            </fieldset>
+    <!-- Usasse o form pra iniciar formulários, o maxleight é o número máximo de caracteres, readonly é pra travar o formulario-->
+    <!-- lembrar de colocar dentro das <div></div> inicia-se com <label> a parte for="" é pra identificação, se colocar junto <id="">-->
+    <!-- placeholder é a mensagem que aparece no campo para deixar intuitivo para a pessoa saber o que digitar-->
+    <!-- required faz o campo obrigatório-->
+    <h1>Formulários</h1>
+    <form action="">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" value="" maxlength="10" size="" placeholder="Digite seu nome" required id="nome">
+    </div>
+    <div>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+    </div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id:"email">
+    <div>
+        <button type="summit">Enviar</button>
+        <button type="reset">Apagar</button>
+    </div>
+        </form>
+
+    </main>
+    <footer id="rodape">
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <p>"2024. Livraria John & Paul - &copy; Todos os direitos reservados"</p>
+    </footer>
+</body>
+</html>
