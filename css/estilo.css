@@ -1,29 +1,32 @@
 /* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
 * {
-    margin:0;
-    padding: 0;
+    margin: 1px;
+    padding: ;
     box-sizing: border-box;
+    text-align: ;
+
 }
 /* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
 /* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
-/* --HEADER-- */
+/* -----HEADER------ */
 #topo {
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
 }
+/* -------NAV------- */
 #menu {
     background: rgb(250,198,121);
     background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
 }
 
 /* --MAIN -- */
-
 .destaques, .produtos, .sobre, .contato{
     background: rgb(145,96,21);
     background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
 }
+
+/* -------------FOOTER---------------*/
 #rodape {
     background-color: darkkhaki;
 }
 
-/* -------------NAV ------------------*/
