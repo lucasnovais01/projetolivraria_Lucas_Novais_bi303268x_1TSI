@@ -1,9 +1,9 @@
 /* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
 * {
     margin: 1px;
-    padding: ;
+    padding: "";
     box-sizing: border-box;
-    text-align: ;
+    text-align: "";
 
 }
 /* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
