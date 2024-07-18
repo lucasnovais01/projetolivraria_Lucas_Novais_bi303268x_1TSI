@@ -12,21 +12,38 @@
 #topo {
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
+    color: red;
+    text-align: center;
+}
+#topo h1 {
+    font-size: 90px;
 }
 /* -------NAV------- */
 #menu {
     background: rgb(250,198,121);
     background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
 }
-
 /* --MAIN -- */
 .destaques, .produtos, .sobre, .contato{
     background: rgb(145,96,21);
     background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
 }
-
 /* -------------FOOTER---------------*/
 #rodape {
     background-color: darkkhaki;
 }
+/* Exemplos usando somente o parágrafo do rodapé, id e class */
+#rodape p {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: overline wavy;
+}
+#final {
+    color: red
+}
+.fundo {
+    font-style: italic;
+}
+/* -------------PROPRIEDADE DE FONTES------------------ */
 
+/* font-family - Altera familia de fontes */
