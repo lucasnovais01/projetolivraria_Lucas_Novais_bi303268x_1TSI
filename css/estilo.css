@@ -44,6 +44,27 @@
 .fundo {
     font-style: italic;
 }
+
+a {
+    text-decoration: none
+}
+a:visited {
+    color: antiquewhite
+}
+
+a:hover {
+    background-color: black;
+    color: yellow;
+    font-size: 30px;
+    margin: 5px;
+    border: solid 2px white;
+}
+#topo:hover {
+    display: none;
+}
+
 /* -------------PROPRIEDADE DE FONTES------------------ */
 
-/* font-family - Altera familia de fontes */
+/* text.decoration: none tira o risquinho debaixo */
+
+/* font-family - Altera familia de fontes. text-transform */
