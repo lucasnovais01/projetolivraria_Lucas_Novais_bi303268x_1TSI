@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <!-- Estudos CSS sobre pseudo classes e seletores-->
+    <style>
+    /* Estado dos links na página */
+    a:link {
+        color: red;
+    }
+    a:visited {
+        color: rgb(0, 0, 0);
+    }
+    a:hover {
+        background-color: aqua;
+    }
+    a:active {
+        color:coral;
+        font-size: 100px;
+        font-family: fantasy;
+    }
+    /* teste de margem e paddding */
+    /* Margin, padding, border pro site todo
+    * {
+        margin: "";
+        padding: "";
+    }
+    */
+    /* A margem, padding e border, influeciem no tamanho do elemento */
+    /* Margem: São 4 margens e influenciam no tamanho do elemento */
+    /* Exemplo de aplicação somente no <p> abaixo:
+    p {
+        margin: "";
+        padding: "";
+    }
+    */
+    /* EXEMPLO DE DIV 250 X 530:
+    div{
+        width: 220px;
+        height: 500px;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 10px;
+    }
+    */
+    /* exemplo de margem no body:
+    body {
+        margin:100px 50px 
+    }    
+    */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #topo {
+        background-color: red;
+        position:"";
+    }
+    h1 {
+        margin: 0%;
+        padding: 0%;
+        border: 0px solid;
+        border-width: 0px;
+        color: white;
+        text-align: center;
+        font-size: 280%;
+    }
+    /* --- border, exemplos  --- */
+    #corpo #corpo2 .um {
+        margin: 100px 100px 100px 100px;
+        text-align: center;
+    }
+
+
+    /* positon: fixed, absolute e relative */
+    /* POSITION RELATIVE */
+    .relativo {
+        position: relative;
+        top: -200px;
+        left: 100px;
+    }
+    /* POSITION ABSOLUTE */
+    .absoluto {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+    .quad {
+        width: 100px;
+        height: 100px;
+    }
+    /* Z-INDEX exemplo: */
+    .um {
+        background-color: blue;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .dois{
+        background-color: red;
+        z-index:3 ;
+        position: absolute;
+        top:10px;
+        left: 10px;
+    }
+    .tres {
+        background-color: green;
+        z-index:2;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div id="topo">
+        <h1>FUTEBOL</h1>
+    </div>
+<br>
+    <div id="corpo">
+        <p>ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam doloribus harum blanditiis delectus ipsa totam, in dignissimos ea iure quibusdam pariatur, omnis aperiam quos. Dolorem nostrum placeat sint possimus totam!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus vel dolore, nemo sapiente consectetur reprehenderit maxime, odit aliquam quasi velit recusandae dolorum delectus. Inventore perferendis nobis soluta exercitationem ducimus!</p>
+        <p>ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum neque, aperiam itaque dolorem impedit nesciunt natus voluptatem iste quia suscipit corrupti placeat. Natus aliquid illum voluptatum aperiam cupiditate corrupti iste.</p>
+<br>
+<br>
+    </div>
+    <div id="corpo2">
+        <p>ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor ea vitae aspernatur, ratione perferendis dolores velit maxime ullam iste saepe quas illum a minima soluta, est mollitia praesentium eveniet.</p>
+        <p>ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor ea vitae aspernatur, ratione perferendis dolores velit maxime ullam iste saepe quas illum a minima soluta, est mollitia praesentium eveniet.</p>
+        <p>ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor ea vitae aspernatur, ratione perferendis dolores velit maxime ullam iste saepe quas illum a minima soluta, est mollitia praesentium eveniet.</p>
+        <p>ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor ea vitae aspernatur, ratione perferendis dolores velit maxime ullam iste saepe quas illum a minima soluta, est mollitia praesentium eveniet.</p>
+        <p>ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolor ea vitae aspernatur, ratione perferendis dolores velit maxime ullam iste saepe quas illum a minima soluta, est mollitia praesentium eveniet.</p>
+    </div>
+<br>
+    <div class="um">
+        <p>a</p>
+    </div>
+    <div class="dois">
+        <p>a</p>
+    </div>
+    <div class="tres">
+        <p>a</p>
+    </div>
+</body>
+</html>
+
+<!-- teste de tabela na div 
+
+    <div>
+    <fieldset>
+    <table border="1px">
+        <tr>
+            <td>linha impar</td>
+        </tr>
+        <tr>
+            <td>linha par</td>
+        </tr>
+        <tr>
+            <td>linha impar</td>
+        </tr>
+        <tr>
+            <td>linha par</td>
+        </tr>
+    </table>
+    </fieldset>
+    </div>
+-->
