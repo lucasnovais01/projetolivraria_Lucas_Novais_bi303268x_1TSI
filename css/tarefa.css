@@ -11,7 +11,7 @@ html, body {
 }
 body {
     background-image: url(https://graficarocha.com.br/wp-content/uploads/2018/04/livraria-1024x768.jpg); /* URL da imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-size:cover; /* Faz a imagem cobrir toda a tela */
     background-position: center; /* Centraliza a imagem na tela */
     background-repeat: repeat; /* Impede a repetição da imagem */
 }
@@ -44,13 +44,13 @@ body {
 #menu ul li a {
     text-decoration: none; /* Remove o sublinhado dos links */
     color: #333; /* Cor do texto dos links */
-    margin: 25px;
+    margin: 0px;
     padding: 10px 40px; /* Espaçamento interno dos links */
     background-color: #f0f0f0; /* Cor de fundo dos links */
     border-radius: 5px; /* Bordas arredondadas */
 }
 #menu ul li a:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    background-color: #55e761; /* Cor de fundo ao passar o mouse */
 }
 /* ----- MAIN ----- */
 /* Estilo para o conteúdo principal */
@@ -58,25 +58,89 @@ body {
     position: relative;
     z-index: 800; /* Fica abaixo do menu e cabeçalho */    
     top: 105px;
-/* O margin-top:""; estava bugando o conteúdo, então troquei pra só top: ""; */
+    margin-bottom: 0%;
+    /* O margin-top:""; estava bugando o conteúdo, então troquei pra só top: ""; */
     border: 100px;
     margin: 70px auto 0; /* Adiciona margem superior suficiente para evitar sobreposição */
     width: 80%;
     background-color: beige;
-    padding: 20px; /* Espaçamento interno para o conteúdo principal */    
+    padding: 0px; /* Espaçamento interno para o conteúdo principal */    
 }
 /* O HEADER (#topo e #menu), FOOTER (#rodape) e o MAIN, de todas as páginas serão iguais, agora abaixo, o conteúdo .destaque, é diferente cada página */
-.destaque ul li {
-    display: inline; /* Garante que os itens fiquem em linha */
+
+/* --- --------------------------------------- --- */
+/* --- ---------- CONTEÚDO DO SITE ----------- --- */
+/* --- --------------------------------------- --- */
+#titulo1 {
+    font-size: 50px;
+    font-family:initial;
+    margin: 0% 11%;
+    padding-top: 5%;
+    text-decoration: underline overline;
+    text-shadow: 2px 2px 8px #964b00;
 }
-.destaque ul li a {
+ul {
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    list-style: none; /* Remove os marcadores das listas */
+    display: flex; /* Usa Flexbox para layout */
+    justify-content: center; /* Centraliza os itens no contêiner */
+}
+
+/* Estilo específico para os itens da lista */
+li {
+    flex: 0 1 30%; /* Define que cada item ocupe aproximadamente 30% da largura do contêiner */
+    display: flex; /* Usa Flexbox para layout interno */
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 30px; /* Adiciona margem entre os itens */
+}
+/* Estilo para as imagens dentro dos itens da lista */
+li img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+/* Estilo para o texto abaixo das imagens */
+li span {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Adiciona um espaço entre a imagem e o texto */
+}
+/* --- --------------------------------------- --- */
+/* --- --------- FOOTER ou rodapé ------------ --- */
+/* --- --------------------------------------- --- */
+footer {
+    z-index: 850; /* Garante que o rodapé fique acima de outros conteúdos */
+    margin: 0px; /* Adiciona margem entre os itens */
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 0; /* Remove a borda padrão */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    background-color: #b17e45; /* Cor de fundo */
+/* Importante: Estou muito confuso sobre a parte debaixo, preciso de ajuda pra entender */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: flex-start; /* Alinha o conteúdo horizontalmente ao centro */
+    position: relative; /* Normalmente posicionado */
+    display: flex; /* Usa Flexbox para layout */
+}
+#nav ul li a{
+    font-weight: bold;
     text-decoration: none; /* Remove o sublinhado dos links */
-    color: #333; /* Cor do texto dos links */
-    margin: 25px;
-    padding: 10px 40px; /* Espaçamento interno dos links */
-    background-color: #f0f0f0; /* Cor de fundo dos links */
-    border-radius: 5px; /* Bordas arredondadas */
+    color: #ffffff; /* Cor do texto dos links */    
+    padding: 15% 15%; /* Espaçamento interno dos links */
+    margin: 0px;
+    background: rgb(0, 0, 0);
+    border-radius: 9px; /* Bordas arredondadas */
 }
-.destaque ul li a:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+#nav ul li a:hover {
+    background-color: #55e761; /* Cor de fundo ao passar o mouse */
+}
+#nav ul li a:active {
+    font-size: larger;
+}
+/* Estilo para o parágrafo dentro do rodapé */
+#fundo p {
+    font-size: 25px; /* Tamanho da fonte */
 }

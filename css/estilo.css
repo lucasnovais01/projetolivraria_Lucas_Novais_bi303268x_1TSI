@@ -34,19 +34,6 @@
 #rodape {
     background-color: darkkhaki;
 }
-/* Exemplos usando somente o parágrafo do rodapé, id e class */
-#rodape p {
-    font-size: 30px;
-    text-align: center;
-    text-decoration: overline wavy;
-}
-#final {
-    color: red
-}
-.fundo {
-    font-style: italic;
-}
-
 a {
     text-decoration: none
 }
