@@ -1,0 +1,82 @@
+/*-- Margin, border and padding -- */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/* um pouco confuso sobre estas 2 linhas de baixo, mas sem elas o conteúdo buga */
+html, body {
+    height: 100%; /* Garante que o html e o body ocupem a altura total da tela */
+    margin: 0; /* Remove margens padrão */
+}
+body {
+    background-image: url(https://graficarocha.com.br/wp-content/uploads/2018/04/livraria-1024x768.jpg); /* URL da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem na tela */
+    background-repeat: repeat; /* Impede a repetição da imagem */
+}
+/* ----- HEADER ----- */
+.header {
+    position: fixed; /* Torna o cabeçalho fixo */    
+    padding: 10px; /* Espaçamento interno */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros conteúdos */
+    font-size: 25px;
+    text-align: center;
+}
+/* ------ MENU ------ */
+#menu {
+    position: fixed;
+    z-index: 900;
+    text-align: center;
+    margin-top: 50px; /* Adiciona margem superior para evitar sobreposição pelo cabeçalho fixo */
+    padding: 20px; /* Espaçamento interno */
+    width: 100%;
+    left: 0;
+}
+#menu ul li {
+    display: inline; /* Garante que os itens fiquem em linha */
+}
+#menu ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #333; /* Cor do texto dos links */
+    margin: 25px;
+    padding: 10px 40px; /* Espaçamento interno dos links */
+    background-color: #f0f0f0; /* Cor de fundo dos links */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+#menu ul li a:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+/* ----- MAIN ----- */
+/* Estilo para o conteúdo principal */
+#main {
+    position: relative;
+    z-index: 800; /* Fica abaixo do menu e cabeçalho */    
+    top: 105px;
+/* O margin-top:""; estava bugando o conteúdo, então troquei pra só top: ""; */
+    border: 100px;
+    margin: 70px auto 0; /* Adiciona margem superior suficiente para evitar sobreposição */
+    width: 80%;
+    background-color: beige;
+    padding: 20px; /* Espaçamento interno para o conteúdo principal */    
+}
+/* O HEADER (#topo e #menu), FOOTER (#rodape) e o MAIN, de todas as páginas serão iguais, agora abaixo, o conteúdo .destaque, é diferente cada página */
+.destaque ul li {
+    display: inline; /* Garante que os itens fiquem em linha */
+}
+.destaque ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #333; /* Cor do texto dos links */
+    margin: 25px;
+    padding: 10px 40px; /* Espaçamento interno dos links */
+    background-color: #f0f0f0; /* Cor de fundo dos links */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+.destaque ul li a:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}

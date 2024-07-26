@@ -1,11 +1,13 @@
 /* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
+
+/* margem do documento
 * {
     margin: 1px;
     padding: "";
     box-sizing: border-box;
     text-align: "";
-
 }
+*/
 /* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
 /* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
 /* -----HEADER------ */
@@ -48,10 +50,20 @@
 a {
     text-decoration: none
 }
+
+/* --SELETOR DE LINKS 
+Seletores de Link:
+
+a:link: Aplica-se a todos os links que ainda não foram visitados.
+a:visited: Aplica-se a links que já foram visitados pelo usuário.
+a:hover: Aplica-se quando o cursor do mouse está sobre um link.
+a:active: Aplica-se quando um link está sendo clicado.
+
+Exemplo:
+
 a:visited {
     color: antiquewhite
 }
-
 a:hover {
     background-color: black;
     color: yellow;
@@ -59,10 +71,13 @@ a:hover {
     margin: 5px;
     border: solid 2px white;
 }
+    
+---TAMBÉM FUNCIONA COM OUTRAS DIVS, EXEMPLO, O DEBAIXO FAZ O TOPO DESAPARECER QUANDO O MOUSE ESTÁ ENCIMA--
+
 #topo:hover {
     display: none;
 }
-
+*/
 /* -------------PROPRIEDADE DE FONTES------------------ */
 
 /* text.decoration: none tira o risquinho debaixo */
