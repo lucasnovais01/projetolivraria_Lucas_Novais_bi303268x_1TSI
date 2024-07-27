@@ -12,50 +12,70 @@
 <body>
     <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
 <header class="header">
-        <h1>Livraria São João</h1>
+        <h1 id="comeco">Livraria São João</h1>
         <h2>"Livros novos e usados  com os melhores preços para você"</h2>
         <div id="logo">
         </div>
 </header>
-<nav id="menu">
-        <ul>
+<nav class="menu" id="menu">
+    <ul>
         <b>
             <li><a href="#">Inicio</a></li>
             <li><a href="pages/produtos.html">Livros</a></li>
-            <li><a href="#">Promoções</a></li>
+            <li><a href="pages/Promocao.html">Promoções</a></li>
             <li><a href="pages/sobre.html">São João</a></li>
             <li><a href="pages/contato.html">Contatos</a></li>
         </b>
-        </ul>
+    </ul>
 </nav>
 <!--O site picsum photos, pode ser usado pra gerar imagens aleatórios de tamanho pre-determinado, util na hora de criar um site-->
-<main class="destaque" id="main">
+<!------------------------>
+<!-- ------ MAIN ------ -->
+<!------------------------>
+<main class="main">
     <h2 id="titulo1">Destaques:</h2><br>
+<!------------------------>
+<!--- CONTEÚDO DO INDEX--->
+<!------------------------>
         <div class="linha1">
+            <ul class="ulindex">
+                <li><a href="pages/produtos.html"><img src="images/livro 1 O segredo nas sombras-modificado-pixel150-230.jpg"></a><br><span><a href="pages/produtos.html">O segredo nas sombras</span></li></p></a>
+            </ul>
             <ul>
-                <li><a href="#"><img src="images/livro 1 O segredo nas sombras-modificado-pixel150-230.jpg"></a><span><a href="#">O segredo nas sombras</span></li></a>
-                <li><a href="#"><img src="https://picsum.photos/150/230"></a><span><a href="#">Livro 2</span></li></a>
-                <li><a href="#"><img src="https://picsum.photos/150/231"></a><span><a href="#">Livro 3</span></li></a>
-        </div>
-        <div class="linha2">
+                <li><a href="#"><img src="https://picsum.photos/150/230"></a><br><span><a href="#">Livro 2</span></li></a>
+            </ul>
             <ul>
-                <li><a href="#"><img src="https://picsum.photos/150/232"></a><span><a href="#">Livro 4</span></li></a>
-                <li><a href="#"><img src="https://picsum.photos/150/233"></a><span><a href="#">Livro 5</span></li></a>
-                <li><a href="#"><img src="https://picsum.photos/151/230"></a><span><a href="#">Livro 6</span></li></a>
+                <li><a href="#"><img src="https://picsum.photos/150/231"></a><br><span><a href="#">Livro 3</span></li></a>
             </ul>
         </div>
-<!-- ---- FOOTER ----- !-->
-<footer class="rodape">
-    <div id="nav">
-        <ul>
-            <li id="inicio"><a href="#logo">Início</li></a>
-            <li id="ajuda"><a href="#">Ajuda?</li></a>
-        </ul> 
-</div>
-    <div id="fundo">
-        <p>"2024. Livraria John & Paul - &copy; Todos os direitos reservados"</p>
-    </div>
+
+        <div class="linha1">
+            <ul id="ulindex">
+                <li><a href="#"><img src="https://picsum.photos/150/232"></a><br><span><a href="#">Livro 4</span></li></a>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/233"></a><br><span><a href="#">Livro 5</span></li></a>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/151/230"></a><br><span><a href="#">Livro 6</span></li></a>
+            </ul>
+        </div>
 </main>
+<!------------------------>
+<!-- ---- FOOTER ----- !-->
+<!------------------------>
+<footer class="rodape2" id="rodape2a">
+    <div id="nav">
+        <ul id="ulindex">
+            <li id="scrollToTop" onclick="scrollToTop()"><a href="#">Início</li></a>
+<br>
+            <li id="ajuda"><a href="https://www.google.com/search?q=ajuda&oq=ajuda&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU4OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Ajuda?</li></a>
+        </ul> 
+    </div>
+
+<div id="fundo">
+        <p>"2024. Livraria São João - &copy; Todos os direitos reservados"</p>
+</div>
 </footer>
 </body>
 </html>

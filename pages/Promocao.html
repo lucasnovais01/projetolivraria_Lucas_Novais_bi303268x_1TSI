@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria São João:Produtos</title>
+<!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/tarefa.css">
+</head>
+<body>
+<!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
+<header class="header">
+        <h1 id="comeco">Livraria São João</h1>
+        <h2>"Livros novos e usados  com os melhores preços para você"</h2>
+        <div id="logo">
+        </div>
+</header>
+<nav class="menu">
+        <ul>
+        <b>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="produtos.html">Livros</a></li>
+            <li><a href="Promocao.html">Promoções</a></li>
+            <li><a href="sobre.html">São João</a></li>
+            <li><a href="contato.html">Contatos</a></li>
+        </b>
+        </ul>
+</nav>
+<br><br><br>
+<main class="main" id="main2">
+    <h2 id="titulo1">Oferta:</h2><br>
+<!------------------------------->
+<!-- CONTEÚDO DO SITE PRODUTOS -->
+<!------------------------------->
+<div class="oferta">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="https://picsum.photos/150/229" alt="Produto em Oferta">
+                <br>
+                <span>OFERTA DO DIA !!</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Formulário de Pedido -->
+<section class="form-section">
+    <h2>Preencha o Formulário para Receber o Produto</h2>
+    <form action="#" method="post">
+        <fieldset>            
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Enviar Pedido</button>
+                <button type="reset">Limpar</button>
+                <a href="https://www.amazon.com.br/Segredo-nas-Sombras-Contos-horror-ebook/dp/B09VZZ1CKX" target="_blank"><button id=cadastrado type="button">Já sou cadastrado</button></a>
+            </div>
+        </fieldset>
+    </form>
+</section>
+</main>
+
+<!----- FOOTER / RODAPÉ ----->
+        
+<footer class="rodape2" id="rodape2a">
+            <div id="nav">
+                <ul id="ulindex">
+                    <li id="scrollToTop" onclick="scrollToTop()"><a href="#">Início</li></a>
+                </ul> 
+        <br>
+                <ul>
+                    <li id="ajuda"><a href="https://www.google.com/search?q=ajuda&oq=ajuda&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU4OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Ajuda?</li></a>
+                </ul>
+            </div>
+        
+        <div id="fundo">
+                <p>"2024. Livraria São João - &copy; Todos os direitos reservados"</p>
+        </div>
+        
+        </footer>
+        </body>
+        </html>
+
+
+
+
+
+

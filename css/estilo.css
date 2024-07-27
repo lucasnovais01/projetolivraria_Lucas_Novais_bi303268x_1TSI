@@ -10,7 +10,13 @@
 */
 /* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
 /* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
-/* -----HEADER------ */
+
+/* --- --------------------------------------- --- */
+/* --- ----- O estilo.css -------------------- --- */
+/* --- --------------------------------------- --- */
+
+
+/* -------------HEADER------------ */
 #topo {
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
@@ -20,13 +26,13 @@
 #topo h1 {
     font-size: 90px;
 }
-/* -------NAV------- */
-#menu {
+/* ------- NAV ------- */
+.menu {
     background: rgb(250,198,121);
     background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
 }
-/* --MAIN -- */
-.destaques, .produtos, .sobre, .contato{
+/* ----- MAIN ------ */
+.produtos, .sobre, .contato{
     background: rgb(145,96,21);
     background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
 }
@@ -37,7 +43,6 @@
 a {
     text-decoration: none
 }
-
 /* --SELETOR DE LINKS 
 Seletores de Link:
 
@@ -45,6 +50,8 @@ a:link: Aplica-se a todos os links que ainda não foram visitados.
 a:visited: Aplica-se a links que já foram visitados pelo usuário.
 a:hover: Aplica-se quando o cursor do mouse está sobre um link.
 a:active: Aplica-se quando um link está sendo clicado.
+
+É possível também sem o a, colocando a class seguida de dois ponto e o efeito, exemplo main:hover
 
 Exemplo:
 

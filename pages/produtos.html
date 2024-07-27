@@ -4,89 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria São João</title>
-    <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
+    <title>Livraria São João:Produtos</title>
+<!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/tarefa.css">
 </head>
 <body>
-    <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
-    <header id="topo">
-        <h1>Livraria São João</h1>
+<!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
+<header class="header">
+        <h1 id="comeco">Livraria São João</h1>
         <h2>"Livros novos e usados  com os melhores preços para você"</h2>
         <div id="logo">
-            
         </div>
-    </header>
-    <nav id="menu">
+</header>
+<nav class="menu">
         <ul>
         <b>
             <li><a href="../index.html">Início</a></li>
             <li><a href="produtos.html">Livros</a></li>
-            <li><a href="#">Promoções</a></li>
-            <li><a href="sobre.html">John & Paul</a></li>
+            <li><a href="Promocao.html">Promoções</a></li>
+            <li><a href="sobre.html">São João</a></li>
             <li><a href="contato.html">Contatos</a></li>
         </b>
         </ul>
-    </nav>
-    <!--O site picsum photos, pode ser usado pra gerar imagens aleatórios de tamanho pre-determinado, util na hora de criar um site-->
-    <main class="produtos">
-        <table>
+</nav>
+<br><br><br>
+<main class="main" id="main2">
+    <h2 id="titulo1">Livros:</h2><br>
+<!------------------------------->
+<!-- CONTEÚDO DO SITE PRODUTOS -->
+<!------------------------------->
+        <div class="coluna1" id="coluna1a">
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/229"></a><span><a href="#">O segredo nas sombras</span></li></a><p>Sinopse das Histórias: 1. A Cidade Assustadora Shóstenes é um jovem corajoso que vive em uma cidade assustadora, cheia de mistérios e lendas sombrias. Quando ele e seus três amigos descobrem a existência de um vilão perigoso que ameaça a cidade, eles se unem para desvendar os segredos ocultos e enfrentar o mal. Em uma emocionante jornada, eles enfrentam criaturas assustadoras e desafios aterrorizantes, colocando suas vidas em risco para salvar sua cidade do perigo iminente.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/230"></a><span><a href="#">Livro 2</span></li></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, aliquid vitae, excepturi, pariatur earum hic rem asperiores eos obcaecati quis nobis molestias exercitationem laboriosam odit est id facere quos corporis.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/231"></a><span><a href="#">Livro 3</span></li></a><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, atque autem? Beatae nam reprehenderit iure ut odit suscipit exercitationem nobis maxime. Officia quia nemo sint aliquid consequuntur cupiditate doloremque sit.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/232"></a><span><a href="#">Livro 4</span></li></a><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, atque autem? Beatae nam reprehenderit iure ut odit suscipit exercitationem nobis maxime. Officia quia nemo sint aliquid consequuntur cupiditate doloremque sit.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/150/233"></a><span><a href="#">Livro 5</span></li></a><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, atque autem? Beatae nam reprehenderit iure ut odit suscipit exercitationem nobis maxime. Officia quia nemo sint aliquid consequuntur cupiditate doloremque sit.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+            <ul>
+                <li><a href="#"><img src="https://picsum.photos/151/230"></a><span><a href="#">Livro 6</span></li></a><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, atque autem? Beatae nam reprehenderit iure ut odit suscipit exercitationem nobis maxime. Officia quia nemo sint aliquid consequuntur cupiditate doloremque sit.</p><a href="#">Mais »</a>
+            </ul>
+            <br>
+        </div>
+        <table class="tabela1">
             <thead>
                 <tr>
                     <th>#id</th>
                     <th>Titulo</th>
                     <th>Autor</th>
                     <th>Preço</th>
+                    <th>Comprar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>titulo 1</td>
-                    <td>autor 1</td>
-                    <td>R$50,00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>titulo 1</td>
-                    <td>autor 1</td>
-                    <td>R$50,00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>titulo 1</td>
-                    <td>autor 1</td>
-                    <td>R$50,00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>titulo 1</td>
-                    <td>autor 1</td>
-                    <td>R$50,00</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>titulo 1</td>
-                    <td>autor 1</td>
-                    <td>R$50,00</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">Esses são nossos produtos</td>
-                </tr>
-            </tfoot>
-        </table>
-    </main>
-    <footer id="rodape">
+                        <td>1</td>
+                        <td>O segredo nas sombras</td>
+                        <td>autor: Shóstenes S. Formiga</td>
+                        <td>R$30,00</td>
+                        <td id="centralizar"><a href="https://www.amazon.com.br/Segredo-nas-Sombras-Contos-horror-ebook/dp/B09VZZ1CKX" target="_blank"><button class="btn-compre">Clique aqui</button></td></a> <!-- BOTÃO -->
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Livro 2</td>
+                        <td>autor: Fulano</td>
+                        <td>R$49,99</td>
+                        <td id="centralizar"><a href="#"></a><button class="btn-compre">Clique aqui</button></td> <!-- Botão -->
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Livro 3</td>
+                        <td>autor: Ciclano</td>
+                        <td>R$49,99</td>
+                        <td id="centralizar"><a href="#"></a><button class="btn-compre">Clique aqui</button></td> <!-- botão -->
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Livro 4</td>
+                        <td>autor: George Lucas</td>
+                        <td>R$50,00</td>
+                        <td id="centralizar"><a href="#"></a><button class="btn-compre">Clique aqui</button></td> <!-- botão -->
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Livro 5</td>
+                        <td>autor: George Orwell</td>
+                        <td>R$23,00</td>
+                        <td id="centralizar"><a href="#"></a><button class="btn-compre">Clique aqui</button></td> <!-- botão -->
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Livro 6</td>
+                        <td>autor: Aldous Huxley</td>
+                        <td>R$30,00</td>
+                        <td id="centralizar"><a href="#"></a><button class="btn-compre">Clique aqui</button></td> <!-- botão -->
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Esses são nossos produtos</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br><br><br>
+</main>
+
+<!----- FOOTER / RODAPÉ ----->
+
+<footer class="rodape2" id="rodape2a">
+    <div id="nav">
+        <ul id="ulindex">
+            <li id="scrollToTop" onclick="scrollToTop()"><a href="#">Início</li></a>
+        </ul> 
+<br>
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li id="ajuda"><a href="https://www.google.com/search?q=ajuda&oq=ajuda&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU4OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Ajuda?</li></a>
         </ul>
-        <p>"2024. Livraria John & Paul - &copy; Todos os direitos reservados"</p>
-    </footer>
+    </div>
+
+<div id="fundo">
+        <p>"2024. Livraria São João - &copy; Todos os direitos reservados"</p>
+</div>
+
+</footer>
 </body>
 </html>

@@ -142,8 +142,7 @@ BACKUP
     gap: 10px; /* Espaço entre as imagens */
 }
 
-o que deveria ser a linha 3 do index
-
+/* o que deveria ser a linha 3 do index
 <!--
         <div id="linha3">
             <ul>
@@ -155,3 +154,81 @@ o que deveria ser a linha 3 do index
                 <li><a href=""></a><img src="https://picsum.photos/151/232">Livro 10</li>
             </ul>
 -->
+*/
+/* ------------------------------------------ */
+/* --------------- TABELAS ------------------ */
+/* ------------------------------------------ */
+BACKUP DO INDEX
+
+ul {
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    list-style: none; /* Remove os marcadores das listas */
+    display: flex; /* Usa Flexbox para layout */
+    justify-content: center; /* Centraliza os itens no contêiner */
+}
+/* Estilo específico para os itens da lista */
+li {
+    flex: 0 1 30%; /* Define que cada item ocupe aproximadamente 30% da largura do contêiner */
+    display: flex; /* Usa Flexbox para layout interno */
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 30px; /* Adiciona margem entre os itens */
+}
+/* Estilo para as imagens dentro dos itens da lista */
+li img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+/* Estilo para o texto abaixo das imagens */
+li span {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+/* ------------------------------------------ */
+/* ------------ PAGINA PRODUTOS ------------- */
+/* ------------------------------------------ */
+
+BACKUP DO QUE EU TAVA TENTANDO FAZER NO SITE PRODUTOS::after
+
+/* ------------------------------------------ */
+/* ------------ PAGINA PRODUTOS ------------- */
+/* ------------------------------------------ */
+
+
+#coluna1a {
+    margin: 10% auto;
+    margin-bottom: 20px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha itens à esquerda */
+    background-color: #f4f4f4; /* Cor de fundo opcional */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+}
+/* Estilo específico para os itens da lista */
+#coluna1a li {
+    flex: 0 1 30%; /* Define que cada item ocupe aproximadamente 30% da largura do contêiner */
+    display: flex; /* Usa Flexbox para layout interno */
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 30px; /* Adiciona margem entre os itens */
+}
+/* Estilo para as imagens dentro dos itens da lista */
+#coluna1a img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+/* Estilo para o texto abaixo das imagens */
+#coluna1a li span {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+
+/* --- --------------------------------------- --- */
+/* --- --------- FOOTER ou rodapé ------------ --- */
+/* --- --------------------------------------- --- */

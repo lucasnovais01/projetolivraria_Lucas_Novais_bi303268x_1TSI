@@ -5,88 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraria São João</title>
-    <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
+<!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/tarefa.css">
 </head>
 <body>
-    <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
-    <header id="topo">
-        <h1>Livraria São João</h1>
+<!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
+<header class="header">
+        <h1 id="comeco">Livraria São João</h1>
         <h2>"Livros novos e usados  com os melhores preços para você"</h2>
         <div id="logo">
-            
         </div>
-    </header>
-    <nav id="menu">
+</header>
+<nav class="menu">
         <ul>
-            <b>
-            <li><a href="../index.html">Inicio</a></li>
+        <b>
+            <li><a href="../index.html">Início</a></li>
             <li><a href="produtos.html">Livros</a></li>
-            <li><a href="#">Promoções</a></li>
-            <li><a href="sobre.html">John & Paul</a></li>
+            <li><a href="Promocao.html">Promoções</a></li>
+            <li><a href="sobre.html">São João</a></li>
             <li><a href="contato.html">Contatos</a></li>
-            </b>
+        </b>
         </ul>
-    </nav>
-    <!--O site picsum photos, pode ser usado pra gerar imagens aleatórios de tamanho pre-determinado, util na hora de criar um site-->
-    <main class="contato">
-        <form action="#">
-            <fieldset>
-                <legend>Contate-nos</legend>
-            
+</nav>
+<br><br><br>
+<main class="main" id="main2">
+    <h2 id="titulo1">Central de atendimento:</h2><br>
+
+<!------------------------------->
+<!-- CONTEÚDO DO SITE PRODUTOS -->
+<!------------------------------->
+
     <!-- Usasse o form pra iniciar formulários, o maxleight é o número máximo de caracteres, readonly é pra travar o formulario-->
     <!-- lembrar de colocar dentro das <div></div> inicia-se com <label> a parte for="" é pra identificação, se colocar junto <id="">-->
     <!-- placeholder é a mensagem que aparece no campo para deixar intuitivo para a pessoa saber o que digitar-->
     <!-- required faz o campo obrigatório-->
-    <div>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" value="" maxlength="" size="" placeholder="digite seu nome" required id="nome">
+        
+    <div class="main3" id="mainform">
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contate-nos</legend>
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tel">Telefone:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Digite seu telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto" required>
+                        <option value="1">Trocas</option>
+                        <option value="2">Atendimento</option>
+                        <option value="3">Comercial</option>
+                        <option value="4">Outros</option>
+                        <option value="5">Devolução</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mens">Deixe seu recado:</label>
+                    <textarea name="mens" id="mens" cols="30" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Apagar</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="digite seu email" id:"email">
-    </div>
-    <div>
-        <label for="tel">Telefone:</label>
-        <input type="tel" name="tel" value="" maxlength="" size="" placeholder="digite seu telefone" id="tel">
-    </div>
-    <div>
-        <label for="assunto">Assunto</label>
-        <select for="assunto">
-            <option value="1">Trocas</option>
-            <option value="2">Atendimento</option>
-            <option value="3">Comercia</option>
-            <option value="4">Outros</option>
-        </select>
-    </div>
-    <div>
-        <label for="mens">Deixe seu recado:</label>
-    <br>
-        <textarea name="mens" id="mens" cols="30" row="10">
-        </textarea>
-    </div>
-    <div>
-        <button type="submit">Enviar</button>
-        <button type="reset">Apagar</button>
-    </div>
-    <div>
-        <label for="mensagem">Mensagem:</label>
-        <input type="text" name="mensagem" value="" maxlength="" size="" placeholder="" required id="mensagem">
-    </div>
+</main>
 
-    </fieldset>
-    </form>
+<!----- FOOTER / RODAPÉ ----->
 
-    </main>
-    <footer id="rodape">
+<footer class="rodape2" id="rodape2a">
+    <div id="nav">
+        <ul id="ulindex">
+            <li id="scrollToTop" onclick="scrollToTop()"><a href="#">Início</li></a>
+        </ul> 
+<br>
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li id="ajuda"><a href="https://www.google.com/search?q=ajuda&oq=ajuda&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU4OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Ajuda?</li></a>
         </ul>
-        <p id="final" class="fundo">"2024. Livraria John & Paul - &copy; Todos os direitos reservados"</p>
-    </footer>
+    </div>
+<div id="fundo">
+        <p>"2024. Livraria São João - &copy; Todos os direitos reservados"</p>
+</div>
+
+</footer>
 </body>
 </html>
