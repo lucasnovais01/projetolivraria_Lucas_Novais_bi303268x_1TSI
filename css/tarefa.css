@@ -60,6 +60,8 @@ body::after {
 }
 .menu ul li {
     display: inline; /* Garante que os itens fiquem em linha */
+    padding-right: 1%;
+    padding-left: 1%;
 }
 .menu ul li a {
     text-decoration: none; /* Remove o sublinhado dos links */
@@ -72,10 +74,14 @@ body::after {
 .menu ul li a:hover {
     background-color: #55e761; /* Cor de fundo ao passar o mouse */
 }
+/* O .menu acima está difícil de alterar */
+
+
 /* --------------------------------------------- */
 /* ------------------- MAIN -------------------- */
 /* --------------------------------------------- */
 /* Estilo para o conteúdo principal */
+
 .main {
     width: 80%;
     position: relative;
@@ -141,6 +147,44 @@ ul {
     text-align: center;
     padding-bottom: 20px;
 }
+/* O decima está errado, pois não é pra fazer vários <ul> e sim um <ul> só e usar o flex e flexwrap, vou manter o css pra */
+
+/*
+justify-content: center;
+row-gap: 16px;
+column-gap: 8px;
+
+.linha2 {
+}
+
+*/
+
+/* os de cima são códigos que foram removidos pra teste */
+
+.linha2 ul {
+    margin: 10% auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 80%;
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linha2 ul li {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* os de cima é a forma correta de usar o flex */
+
 /* ------------------------------------------ */
 /* ------------ PAGINA PRODUTOS ------------- */
 /* ------------------------------------------ */
