@@ -43,38 +43,114 @@ body::after {
     text-align: center;
 }
 /* ------------------ */
-/* ------ MENU ------ */
+/* ------ MENU - FEITO SEM O DISPLAY: FLEX; ------ */
 /* ------------------ */
+
+/* BARRA DE NAVEGAÇÃO/MENU ANTIGO - Cassio pediu pra refazer no displayflex
+
 #menu {
-    margin-top: 50px; /* Adiciona margem superior para evitar sobreposição pelo cabeçalho fixo */
+    margin-top: 50px;
 }
-/* AJUSTE DA BARRA MENU NA PÁGINA PRODUTOS */
 .menu {
     position: fixed;
     z-index: 900;
     text-align: center;
-    margin-top: 120px; /* Adiciona margem superior para evitar sobreposição pelo cabeçalho fixo */
-    padding: 20px; /* Espaçamento interno */
+    margin-top: 120px;
+    padding: 20px;
     width: 100%;
     left: 0;
 }
 .menu ul li {
-    display: inline; /* Garante que os itens fiquem em linha */
+    display: inline;
     padding-right: 1%;
     padding-left: 1%;
 }
 .menu ul li a {
-    text-decoration: none; /* Remove o sublinhado dos links */
+    text-decoration: none;
+    color: #333;
+    margin: 0px;
+    padding: 10px 40px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.menu ul li a:hover {
+    background-color: #55e761;
+
+*/
+
+/* ------------------------------------- */
+/* O .menu acima está difícil de alterar */
+/* ------------------------------------- */
+
+/* -------------HEADER------------ */
+#topo {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
+    color: red;
+    text-align: center;
+}
+#topo h1 {
+    font-size: 90px;
+}
+
+/* --- NOVO --- */
+
+/* --- Esté o .menu2, agora feito com display: flex, muitas coisas mudaram no css aqui  E EM VEZ DE UASR O <B></B> abaixo está usando o font-weight: bold;*/
+
+.menu2 {
+    list-style: none;
+    position: fixed;
+    z-index: 950;
+    width: 100%;
+    background: rgb(250,198,121);
+    background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
+
+    margin-top: 5.4%;
+    
+}
+.menu2 ul {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu2 ul li{    
+    height: 80%;
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 5%;
+}
+
+.menu2 ul li a {
+    text-decoration: none;
     color: #333; /* Cor do texto dos links */
     margin: 0px;
     padding: 10px 40px; /* Espaçamento interno dos links */
     background-color: #f0f0f0; /* Cor de fundo dos links */
     border-radius: 5px; /* Bordas arredondadas */
 }
-.menu ul li a:hover {
+.menu2 ul li a:hover {
     background-color: #55e761; /* Cor de fundo ao passar o mouse */
 }
-/* O .menu acima está difícil de alterar */
+
+
+/* ----- MAIN  IMPORTADO de estilo.css------ */
+.produtos, .sobre, .contato{
+    background: rgb(145,96,21);
+    background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
+}
+/* -------------FOOTER   IMPORTADO de estilo.css---------------*/
+#rodape {
+    background-color: darkkhaki;
+}
+a {
+    text-decoration: none
+}
 
 
 /* --------------------------------------------- */
