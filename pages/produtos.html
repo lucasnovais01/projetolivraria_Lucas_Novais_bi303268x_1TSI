@@ -7,7 +7,6 @@
     <title>Livraria São João:Produtos</title>
 <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/tarefa.css">
 </head>
 <body>
 <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
@@ -30,8 +29,7 @@
     </ul>
 </div>
 
-<br><br><br>
-<main class="main" id="main2">
+<main class="main">
     <h2 id="titulo1">Livros:</h2><br>
 <!------------------------------->
 <!-- CONTEÚDO DO SITE PRODUTOS -->
@@ -61,8 +59,15 @@
                 <li><a href="#"><img src="https://picsum.photos/151/230"></a><span><a href="#">Livro 6</span></li></a><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, atque autem? Beatae nam reprehenderit iure ut odit suscipit exercitationem nobis maxime. Officia quia nemo sint aliquid consequuntur cupiditate doloremque sit.</p><a href="#">Mais »</a>
             </ul>
             <br>
-        </div>
-        <table class="tabela1">
+        </div>    
+
+
+        <!-- TABELAS são um pouco confusas no html, modelo de tabela padrão abaixo pego no google, o botão tem que ficar dentro do td -->
+        <!-- divs de tabelas (thead, tbody e tfoot)-->
+        <!-- As linhas são o <tr> enquanto as cédulas são <td>, existe o <th> que representa as linhas de cima, mas da pra usar uasndo td também, não existe um <tf> até onde eu sei-->
+        <!-- O comando td colspan="6" permite mesclar as linhas, no caso até 6 -->
+        <!-- pra centralizar o tfoot, eu posso usar o tfoot { text-align: center; } no css-->
+<table class="tabela1">
             <thead>
                 <tr>
                     <th>#id</th>

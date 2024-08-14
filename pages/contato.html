@@ -7,7 +7,6 @@
     <title>Livraria São João</title>
 <!--Criado link CSS externo, SELETOR: *, o asterisco significa que vai pegar todos os elementos-->
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/tarefa.css">
 </head>
 <body>
 <!--No html 5, foi criado novas nomenclaturas para as divs, são elas: header, nav, main, footer--> 
@@ -30,8 +29,7 @@
     </ul>
 </div>
 
-<br><br><br>
-<main class="main" id="main2">
+<main class="main">
     <h2 id="titulo1">Central de atendimento:</h2><br>
 
 <!------------------------------->
@@ -76,7 +74,8 @@
                 
                 <div class="form-group">
                     <label for="mens">Deixe seu recado:</label>
-                    <textarea name="mens" id="mens" cols="30" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                    <textarea name="mens" id="mens" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                    <!-- o cols seria a coluna e row as linhas, afeta o visual da página, principalmente o rows, cols="30" até onde testei pode ser retirado sem problema -->
                 </div>
                 
                 <div class="form-group">
@@ -85,7 +84,9 @@
                 </div>
             </fieldset>
         </form>
+    <br>
     </div>
+    <br><br>
 </main>
 
 <!----- FOOTER / RODAPÉ ----->

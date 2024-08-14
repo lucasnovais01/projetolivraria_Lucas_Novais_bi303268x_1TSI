@@ -1,51 +1,8 @@
 /* --- PRINCIPAL CSS ---*/
-
-/*-- Margin, border and padding -- */
-* {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* um pouco confuso sobre o border-sizing: border-box */
-
-/* um pouco confuso sobre estas 2 linhas de baixo, mas sem elas o conteúdo buga */
-body {
-    height: 100%; /* Garante que o html e o body ocupem a altura total da tela */
-    margin: 0; /* Remove margens padrão */
-}
-body {
-    background-image: url(https://graficarocha.com.br/wp-content/uploads/2018/04/livraria-1024x768.jpg); /* URL da imagem de fundo */
-    background-size:auto; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem na tela */
-    background-repeat: repeat; /* Impede a repetição da imagem */
-    position: relative;
-}
-/* NÃO SEI DIREITO O QUE ESTE BODY::after FAZ, mas parece que é depois do conteúdo do body */
-body::after {
-  content: '';
-  display: block;
-  height: 10%;
-  /* Set same as footer's height */
-}
-
-/* ----- HEADER ----- */
-.header {
-    position: fixed; /* Torna o cabeçalho fixo */    
-    padding: 10px; /* Espaçamento interno */
-    top: 0; /* Posiciona o cabeçalho no topo */
-    left: 0; /* Alinha o cabeçalho à esquerda */
-    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
-    background-color: #333; /* Cor de fundo do cabeçalho */
-    color: white; /* Cor do texto no cabeçalho */
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros conteúdos */
-    font-size: 25px;
-    text-align: center;
-}
+/* um pouco confuso sobre estas 2 linhas de baixo */
 /* ------------------ */
 /* ------ MENU - FEITO SEM O DISPLAY: FLEX; ------ */
 /* ------------------ */
-
 /* BARRA DE NAVEGAÇÃO/MENU ANTIGO - Cassio pediu pra refazer no displayflex
 
 #menu {
@@ -75,141 +32,40 @@ body::after {
 }
 .menu ul li a:hover {
     background-color: #55e761;
-
 */
-
 /* ------------------------------------- */
 /* O .menu acima está difícil de alterar */
 /* ------------------------------------- */
 
-/* -------------HEADER------------ */
-#topo {
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
-    color: red;
-    text-align: center;
+/* --- --------------------------------------- --- */
+/* --- ---- RETIRADOS DO CONTEÚDO DO SITE ---- --- */
+/* --- --------------------------------------- --- */
+/*
+body {
+    margin-bottom: 0%;
 }
-#topo h1 {
-    font-size: 90px;
+*/
+/* O margin-top:""; estava bugando o conteúdo, então troquei pra só top: ""; */
+
+/* NAS PÁGINAS PRODUTO, CONTATO, PROMOCAO E SOBRE ANTES DO DISPLAY: FLEX, estavam usando 3 <br> e o css abaixo
+/*
+#main2 {
+    margin: 1% auto 0; /* Adiciona margem superior suficiente para evitar sobreposição
+    min-height:fit-content;
 }
+Agora não precisa mais nem dos <br> e neste este comando */
 
-/* --- NOVO --- */
-
-/* --- Esté o .menu2, agora feito com display: flex, muitas coisas mudaram no css aqui  E EM VEZ DE UASR O <B></B> abaixo está usando o font-weight: bold;*/
-
-.menu2 {
-    list-style: none;
-    position: fixed;
-    z-index: 950;
-    width: 100%;
-    background: rgb(250,198,121);
-    background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
-
-    margin-top: 5.4%;
-    
-}
-.menu2 ul {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu2 ul li{    
-    height: 80%;
-    margin: 10px;
-    padding: 10px;
-
-    border-radius: 5%;
-}
-
-.menu2 ul li a {
-    text-decoration: none;
-    color: #333; /* Cor do texto dos links */
-    margin: 0px;
-    padding: 10px 40px; /* Espaçamento interno dos links */
-    background-color: #f0f0f0; /* Cor de fundo dos links */
-    border-radius: 5px; /* Bordas arredondadas */
-}
-.menu2 ul li a:hover {
-    background-color: #55e761; /* Cor de fundo ao passar o mouse */
-}
-
-
-/* ----- MAIN  IMPORTADO de estilo.css------ */
+/* ----- MAIN  IMPORTADO de estilo.css------ 
 .produtos, .sobre, .contato{
     background: rgb(145,96,21);
     background: linear-gradient(90deg, rgba(145,96,21,1) 0%, rgba(222,146,32,1) 2%, rgba(0,0,0,1) 100%);
-}
-/* -------------FOOTER   IMPORTADO de estilo.css---------------*/
-#rodape {
-    background-color: darkkhaki;
-}
-a {
-    text-decoration: none
-}
+} */
 
 
-/* --------------------------------------------- */
-/* ------------------- MAIN -------------------- */
-/* --------------------------------------------- */
-/* Estilo para o conteúdo principal */
-
-.main {
-    width: 80%;
-    position: relative;
-    z-index: 800; /* Fica abaixo do menu e cabeçalho */    
-    top: 105px;
-    margin-bottom: 0%;
-    /* O margin-top:""; estava bugando o conteúdo, então troquei pra só top: ""; */
-    border: 100px;
-    margin: 70px auto 0; /* Adiciona margem superior suficiente para evitar sobreposição */
-
-    background-color: beige;
-    padding: 0px; /* Espaçamento interno para o conteúdo principal */
-
-    box-sizing: border-box;
-}
-/* A página produtos fica fora de lugar sem o item abaixo */
-#main2 {
-    margin: 1% auto 0; /* Adiciona margem superior suficiente para evitar sobreposição */
-    min-height:fit-content;
-}
-.main3 {
-    margin-top: 12%;
-    width: 70%;
-    background-color: white;
-    margin-top: 0;
-    margin-left: 10%;
-    margin-right: 10%;
-    left: 0;
-    padding: 0;
-    padding-left: 3%;
-    padding-right: 10%;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-/* O HEADER (#topo e #menu), FOOTER (#rodape) e o MAIN, de todas as páginas serão iguais, agora abaixo, o conteúdo .destaque, é diferente cada página */
-
-/* --- --------------------------------------- --- */
-/* --- ---------- CONTEÚDO DO SITE ----------- --- */
-/* --- --------------------------------------- --- */
-#titulo1 {
-    font-size: 50px;
-    font-family:initial;
-    margin: 0% 11%;
-    padding-top: 5%;
-    text-decoration: underline overline;
-    text-shadow: 2px 2px 8px #964b00;
-}
 /* ------------------------------------------ */
 /* --------------- TABELAS ------------------ */
 /* ------------------------------------------ */
-ul {
-    list-style: none;
-}
+/*
 .linha1 {
     margin: 10% auto;
     margin-top: 0%;
@@ -218,403 +74,20 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #f4f4f4; /* Cor de fundo opcional */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-bottom: 20px;
 }
+*/
 /* O decima está errado, pois não é pra fazer vários <ul> e sim um <ul> só e usar o flex e flexwrap, vou manter o css pra */
 
-/*
+/* COMANDOS UTEIS ABAIXO
+
 justify-content: center;
 row-gap: 16px;
 column-gap: 8px;
-
-.linha2 {
-}
-
 */
-
 /* os de cima são códigos que foram removidos pra teste */
 
-.linha2 ul {
-    margin: 10% auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 80%;
-    padding-top: 1%;
-    padding-left: 10%;
-    padding-right: 10%;
 
-    background-color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.linha2 ul li {
-    width: 50%;
-    text-align: center;
-    margin-bottom: 2%;
-}
-
-/* teste */
-
-/* os de cima é a forma correta de usar o flex */
-
-/* ------------------------------------------ */
-/* ------------ PAGINA PRODUTOS ------------- */
-/* ------------------------------------------ */
-.coluna1 {
-    margin: 10% auto;
-    margin-top: 0%;      /* Espaçamento entre o MAIN e o nav */
-    margin-bottom: 20px; /* Espaçamento entre o MAIN e o rodapé */
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #f4f4f4; /* Cor de fundo opcional */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
-    height: 100%;
-}
-    
-/* --- --------------------------------------- --- */
-/* --- --------- FOOTER ou rodapé ------------ --- */
-/* --- --------------------------------------- --- */
-footer {
-    box-sizing: border-box;
-    z-index: 850; /* Garante que o rodapé fique acima de outros conteúdos */
-    margin: 0px; /* Adiciona margem entre os itens */
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    border: 0; /* Remove a borda padrão */
-    bottom: 0; /* Alinha o rodapé na parte inferior */
-    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
-    background-color: #b17e45; /* Cor de fundo */
-/* Importante: Estou muito confuso sobre a parte debaixo, preciso de ajuda pra entender */
-    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
-    justify-content: flex-start; /* Alinha o conteúdo horizontalmente ao centro */
-    position: relative; /* Normalmente posicionado */
-    display: flex; /* Usa Flexbox para layout */
-}
-/* ---------------------------------------- */
-/* ----- BOTÕES DE "INICIO" E "AJUDA" ----- */
-/* ---------------------------------------- */
-
-#nav ul li a{
-    font-weight: bold;
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #ffffff; /* Cor do texto dos links */    
-    padding: 15% 15%; /* Espaçamento interno dos links */
-    margin: 0px;
-    background: rgb(0, 0, 0);
-    border-radius: 9px; /* Bordas arredondadas */
-}
-#nav ul li a:hover {
-    background-color: #55e761; /* Cor de fundo ao passar o mouse */
-}
-#nav ul li a:active {
-    font-size: larger;
-}
-
-/* ---------------------------------------- */
-/* ------------- TABELA ------------------- */
-/* ---------------------------------------- */
-
-.tabela1 {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse; /* Para melhorar a aparência da tabela */
-    width: 80%; /* Ajuste conforme necessário */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* ----- SOMBRAS ------ */
-    }
-    .tabela1 table th td {
-
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Para centralizar verticalmente também, se necessário */
-
-        border-collapse: collapse; /* Para melhorar a aparência da tabela */
-
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-    }
-
-    .tabela2         table {
-        width: 100%; /* Ocupa toda a largura disponível */
-        border-collapse: collapse; /* Remove espaçamentos entre bordas */
-        margin: 20px 0; /* Espaçamento ao redor da tabela */
-        font-family: Arial, sans-serif; /* Fonte da tabela */
-    }
-    thead {
-        background-color: #4CAF50; /* Cor de fundo dos cabeçalhos */
-        color: white; /* Cor do texto dos cabeçalhos */
-    }
-    th, td {
-        border: 1px solid #ddd; /* Borda leve e cinza */
-        padding: 10px; /* Espaçamento interno das células */
-        text-align: left; /* Alinhamento do texto à esquerda */
-    }
-    th {
-        background-color: #4CAF50; /* Cor de fundo dos cabeçalhos */
-        color: white; /* Cor do texto dos cabeçalhos */
-    }
-    tbody tr:nth-child(even) {
-        background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
-    }
-    tbody tr:hover {
-        background-color: #ddd; /* Cor de fundo ao passar o mouse */
-    }
-    tfoot {
-        background-color: #f4f4f4; /* Cor de fundo do rodapé */
-        text-align: center; /* Alinha o texto do rodapé ao centro */
-    }
-    tfoot td {
-        border: none; /* Remove a borda do rodapé */
-        padding: 15px; /* Espaçamento interno do rodapé */
-        font-weight: bold; /* Negrito para o texto do rodapé */
-    }
-/* ---------------------------------------------------------------------------- */
-/* --------------------- BOTÃO DE COMPRAR DA PÁGINA 2 ------------------------- */
-/* ---------------------------------------------------------------------------- */
-    .btn-compre {
-        background-color: #4CAF50; /* Cor de fundo do botão */
-        color: white; /* Cor do texto do botão */
-        border: none; /* Remove a borda padrão do botão */
-        padding: 8px 16px; /* Espaçamento interno do botão */
-        text-align: center; /* Alinha o texto ao centro */
-        text-decoration: none; /* Remove o sublinhado do texto */
-        display: inline-block; /* Faz o botão se comportar como um bloco inline */
-        font-size: 14px; /* Tamanho da fonte do botão */
-        margin: 4px 2px; /* Margem ao redor do botão */
-        cursor: pointer; /* Mostra o cursor de mão ao passar o mouse sobre o botão */
-        border-radius: 4px; /* Borda arredondada do botão */
-    }
-    .btn-compre:hover {
-        background-color: #082e0a; /* Cor de fundo ao passar o mouse sobre o botão */
-    }
-    .btn-compre:active {
-        font-size: larger;
-    }
-    #centralizar {
-        text-align: center; /* Centraliza o texto dentro da célula */
-    }
-
-/* ESTILO :HOVER ENCIMA DE ALGUMAS PARTES DO SITE */
-
-.header:hover {
-    color: #000000;
-    background-color: white;
-}
-.valores:hover {
-    color: #4CAF50;
-    font-weight: bolder;
-}
-
-
-/* ---------------------------------------- */
-/* Estilo para o parágrafo dentro do rodapé */
-/* ---------------------------------------- */
-
-.rodape2 {
-    width: 80%;
-    background-color: #b17e45; /* Cor de fundo */
-    padding: 20px; /* Espaçamento interno para o conteúdo principal */
-    box-sizing: border-box;
-    border: 100px;
-    margin: 10% auto; /* Adiciona margem superior suficiente para evitar sobreposição */
-
-        position: relative;
-
-        margin-left: 10%;
-        margin-top: 5%;
-        margin-bottom:0%;
-        bottom: -50;
-}
-#fundo{
-    font-size: 25px; /* Tamanho da fonte */
-    margin-left: 30%;
-    margin-top: 0%;
-    padding-top: 0%;
-    vertical-align: top; /* Alinha as listas ao topo */
-}
-
-/* ---------------------------------------- */
-/* -- FORMATAÇÃO DO FORMULÁRIO DO CONTATOS -- */
-/* ---------------------------------------- */
-
-#mainform {
-    height: 750px;
-}
-
-fieldset {
-    border: 1px solid #ccc; /* Borda do fieldset */
-    padding: 20px;
-    border-radius: 8px; /* Bordas arredondadas do fieldset */
-    background-color: #e7dede; /* Cor de fundo do fieldset */
-    margin: 0; /* Remove margem padrão */
-}
-legend {
-    font-size: 30px; /* Aumenta o tamanho da fonte do legend */
-    margin-bottom: 10px; /* Espaçamento abaixo do legend */
-    font-weight: bold; /* Negrito no legend */
-}
-
-/* -------- IMPORTANTE -------------- */
-
-.form-group {
-    margin-bottom: 15px; /* Espaçamento ENTRE os grupos de campos */
-}
-
-label {
-    display: block; /* Faz o label ocupar a linha inteira */
-    margin-bottom: 5px; /* Espaçamento abaixo do label */
-    font-weight: bold; /* Texto em negrito */
-}
-
-/* -- Os de baixo não entendi direito como funciona */
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
-    width: 100%; /* Largura total dos campos */
-    padding: 10px; /* Espaçamento interno dos campos */
-    border: 1px solid #ccc; /* Borda dos campos */
-    border-radius: 4px; /* Bordas arredondadas dos campos */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    font-size: 1em; /* Tamanho da fonte dos campos */
-}
-
-textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-}
-
-button {
-    background-color: #4CAF50; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto dos botões */
-    border: none; /* Remove a borda dos botões */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    border-radius: 4px; /* Bordas arredondadas dos botões */
-    cursor: pointer; /* Muda o cursor para indicar clicável */
-    font-size: 1em; /* Tamanho da fonte dos botões */
-    margin-right: 10px; /* Espaçamento entre os botões */
-}
-
-button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
-}
-
-button:active {
-    background-color: #388e3c; /* Cor de fundo ao clicar */
-}
-
-/* ---------------------------------------- */
-/* ----------- PÁGINA DA PROMOÇÃO --------- */
-/* ---------------------------------------- */
-
-.form-section {
-    margin: 10%;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-/* --comando inutilizado----
-#promocao {
-    height: 550px;
-    align-items:normal;
-}
---------------------------*/
-.oferta {
-    text-align: center;
-}
-
-.oferta ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.oferta li {
-    margin: 20px 0;
-}
-
-.oferta img {
-    max-width: 200%;
-    height: 330px;
-/* ---- O comando abaixo deixa a borda arrendadas   
-    border-radius: 8px;
-*/
-}
-.oferta span {
-    display: block;
-    margin-top: 5px;
-    font-size: 35px;
-    font-weight: bold;
-    color: #ff0000;
-}
-.form-section {
-    margin-top: 30px;
-}
-form {
-    display: block;
-}
-fieldset {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-legend {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #6d4cff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-right: 10px;
-}
-button:hover {
-    background-color: #1e6122;
-}
-button:active {
-    background-color: #ff0404;
-}
-#cadastrado {
-    text-align: end;
-}

@@ -232,3 +232,163 @@ BACKUP DO QUE EU TAVA TENTANDO FAZER NO SITE PRODUTOS::after
 /* --- --------------------------------------- --- */
 /* --- --------- FOOTER ou rodapé ------------ --- */
 /* --- --------------------------------------- --- */
+
+/* --- --------------------------------------- --- */
+/* --- --------- FOOTER ou rodapé ------------ --- */
+/* --- --------------------------------------- --- */
+footer {
+    box-sizing: border-box;
+    z-index: 850; /* Garante que o rodapé fique acima de outros conteúdos */
+    margin: 0px; /* Adiciona margem entre os itens */
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 0; /* Remove a borda padrão */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    background-color: #b17e45; /* Cor de fundo */
+/* Importante: Estou muito confuso sobre a parte debaixo, preciso de ajuda pra entender */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: flex-start; /* Alinha o conteúdo horizontalmente ao centro */
+    position: relative; /* Normalmente posicionado */
+    display: flex; /* Usa Flexbox para layout */
+}
+/* ---------------------------------------- */
+/* ----- BOTÕES DE "INICIO" E "AJUDA" ----- */
+/* ---------------------------------------- */
+
+#nav ul li a{
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff; /* Cor do texto dos links */    
+    padding: 15% 15%; /* Espaçamento interno dos links */
+    margin: 0px;
+    background: rgb(0, 0, 0);
+    border-radius: 9px; /* Bordas arredondadas */
+}
+#nav ul li a:hover {
+    background-color: #55e761; /* Cor de fundo ao passar o mouse */
+}
+#nav ul li a:active {
+    font-size: larger;
+}
+
+
+
+
+
+/* BACKUP DA PAGINA PRODUTOS A .COLUNA1 E .TABELA1 ABAIXO */
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ------------- PÁGINA produtos.html SE DIVIDE 2 class, .coluna1 e .tabela1 --------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+.coluna1 {
+    margin: 10% auto;
+    margin-top: 0%;      /* Espaçamento entre o MAIN e o nav */
+    margin-bottom: 20px; /* Espaçamento entre o MAIN e o rodapé */
+    width: 80%;
+
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+
+}
+/* Comandos removidos do .coluna1 abaixo
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+(OBSERVALÇÕES: só com o display: flex; fica um item na frente do outro, enquanto column deixa tudo exatamente como está, o justify-content: space-evenly destribui a mesma distancia entre os itens)
+*/
+
+/* --- TABELA COM OS PREÇOS ---- */
+
+
+.tabela1 {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* Para melhorar a aparência da tabela */
+    width: 80%; /* Ajuste conforme necessário */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* ----- SOMBRAS ------ */
+    }
+    .tabela1 table th td {
+
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Para centralizar verticalmente também, se necessário */
+
+        border-collapse: collapse; /* Para melhorar a aparência da tabela */
+
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .tabela2         table {
+        width: 100%; /* Ocupa toda a largura disponível */
+        border-collapse: collapse; /* Remove espaçamentos entre bordas */
+        margin: 20px 0; /* Espaçamento ao redor da tabela */
+        font-family: Arial, sans-serif; /* Fonte da tabela */
+    }
+    thead {
+        background-color: #4CAF50; /* Cor de fundo dos cabeçalhos */
+        color: white; /* Cor do texto dos cabeçalhos */
+    }
+    th, td {
+        border: 1px solid #ddd; /* Borda leve e cinza */
+        padding: 10px; /* Espaçamento interno das células */
+        text-align: left; /* Alinhamento do texto à esquerda */
+    }
+    th {
+        background-color: #4CAF50; /* Cor de fundo dos cabeçalhos */
+        color: white; /* Cor do texto dos cabeçalhos */
+    }
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+    }
+    tbody tr:hover {
+        background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    }
+    tfoot {
+        background-color: #f4f4f4; /* Cor de fundo do rodapé */
+        text-align: center; /* Alinha o texto do rodapé ao centro */
+    }
+    tfoot td {
+        border: none; /* Remove a borda do rodapé */
+        padding: 15px; /* Espaçamento interno do rodapé */
+        font-weight: bold; /* Negrito para o texto do rodapé */
+    }
+
+/* -- Os de baixo não entendi direito como funciona */
+
+input[type="text"],   /* https://www.w3schools.com/css/css_form.asp */
+input[type="email"],
+input[type="tel"],
+textarea, select {      
+    width: 100%;                                            /* Largura total dos campos */
+    padding: 10px;                    /* Espaçamento interno dos campos */
+    border: 1px solid #ccc;         /* Borda dos campos */
+    border-radius: 4px;               /* Bordas arredondadas dos campos */
+    box-sizing: border-box;           /* Inclui padding e border na largura total */
+    font-size: 1em;                   /* Tamanho da fonte dos campos */
+}
+/* Comando abaixo não entendi pra que serve */
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente) */
+}
+
+
+/* PAGINA PROMOÇÕES FINAL (NÃO SEI PRA QUE SERVE)
+
+.form-section #cadastrado {
+    text-align: end;
+}
+
+*/

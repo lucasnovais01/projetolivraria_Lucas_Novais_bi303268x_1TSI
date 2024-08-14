@@ -1,64 +1,558 @@
-/* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
+/* ABAIXO O CSS DO PROJETO LIVRARIA FORMATADO, SÓ QUE AGORA USANDO DISPLAY: FLEX */
 
-/* margem do documento
+/*-- Margin, border and padding -- */
 * {
-    margin: 1px;
-    padding: "";
-    box-sizing: border-box;
-    text-align: "";
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    background-image: url(https://graficarocha.com.br/wp-content/uploads/2018/04/livraria-1024x768.jpg); /* URL da imagem de fundo */
+    background-repeat: repeat; /* Repete ou impede (no-repeat) a repetição da imagem */
+/* Outros comandos de background
+    background-size: auto; /* Faz a imagem cobrir toda a tela (neste caso não precisa pois estou usando repeat, caso contrário ele aumentaria o tamanho da imagem do fundo até cobrir toda a tela)
+    background-position: center; /* Centraliza a imagem na tela
+*/
+/* Abaixo link sobre POSITIONS: Relative, Static, Absolute, Sticky e Fixed */
+/* https://www.alura.com.br/artigos/entenda-a-propriedade-position-css?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=164068847699&hsa_ad=703853174125&hsa_src=g&hsa_tgt=dsa-2273097816642&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=EAIaIQobChMIhICkvIPwhwMVWFZIAB3KCRElEAAYASAAEgKKY_D_BwE */
+}
+a {
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+}
+/* ----- HEADER ----- */
+.header {
+    position: fixed; /* Torna o cabeçalho fixo */    
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    background-color: #333;
+    color: white; /* COR DA LETRA */
+    z-index: 950; /* Garante que o cabeçalho fique acima de outros conteúdos, no caso o menu/nav teria que ter outro valor, mas acho que não é mais necessária por causa do display: flex, vou deixar aí */
+    font-size: 25px;
+    text-align: center;
+}
+/* Comandos do .header que NÃO precisa mais
+.header {
+    top: 0; /* Posiciona o cabeçalho no topo
+    left: 0; /* Alinha o cabeçalho à esquerda 
+} */
+
+/* ESTILO teste do comando :HOVER ENCIMA DE ALGUMAS PARTES DO SITE */
+
+.header:hover {
+    color: #000000;
+    background-color: white;
+}
+/* Não estou usando mais a classe abaixo
+.valores:hover {
+    color: #4CAF50;
+    font-weight: bolder;
 }
 */
-/* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
-/* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
-
-/* --- --------------------------------------- --- */
-/* --- ----- O estilo.css -------------------- --- */
-/* --- --------------------------------------- --- */
-
-
-
-
-
-/* ------- NAV -------  O item abaixo está desabilitado, o consertado se chama .menu2 no tarefa.css
-
-.menu {
+/* ------------ */
+/* --- NOVO --- */
+/* ------------ */
+/* --- Esté o .menu2, agora feito com display: flex, muitas coisas mudaram no css aqui  E EM VEZ DE USAR O <B></B> abaixo está usando o font-weight: bold; POIS O <B> NÃO estava permitind o css funcionar direito, perguntar pro CASSIO depois */
+.menu2 {
+    list-style: none;   /* FAZ a bolinha/ponto do <UL> sumir  */
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
     background: rgb(250,198,121);
     background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
+    margin-top: 5.5%; /* Como estou usando posição fixa pro .header e pro .menu, deixei o z-index em valores diferentes (antes do display: flex), e preciso do margin-top, pra um não ficar abaixo ou acima do outro como em display block mas fixo */
 }
+.menu2 ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu2 ul li{    
+    height: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+.menu2 ul li a {
+    text-decoration: none;
+    color: #333; /* Cor do texto dos links */
+    margin: 0px;
+    padding: 10px 40px; /* Espaçamento interno dos links, sendo o primeiro "10"px pras "padding" superior e inferior e "40px" pra esquerda e direita */
+    background-color: #f0f0f0; /* Cor de fundo dos links */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+.menu2 ul li a:hover {
+    background-color: #55e761; /* Cor de fundo ao passar o mouse */
+}
+/* --------------------------------------------- */
+/* ------------------- MAIN -------------------- */
+/* --------------------------------------------- */
+/* Estilo do título */
+#titulo1 {
+    font-size: 50px;
+    font-family: initial;
+    margin: 0% 11%;  /* pra ficar onde eu quero */
+    padding-top: 5%; /* longe da borda bege acima */
+    text-decoration: underline overline;
+    text-shadow: 2px 2px 8px #964b00;
+}
+/* ABAIXO estão as class .main e .main3 e o id #main2, observação, eles bugam muito, principalmente o position, ainda não entendo direito os motivos  */
+.main {
+    width: 80%;
+    position: relative;
+    z-index: 800; /* Fica abaixo do menu e cabeçalho */
+    top: 91px; 
 
+    margin: 70px auto; /* Adiciona margem superior suficiente para evitar sobreposição */
+    background-color: beige;
+    padding: 0px; /* Espaçamento interno para o conteúdo principal */
+}
+/* COMANDOI RETIRADO DO .main
+    border: 100px;
 */
+/* O HEADER (#topo e #menu), FOOTER (#rodape) e o MAIN, de todas as páginas serão iguais, agora abaixo, o conteúdo .destaque, é diferente cada página */
 
-/* --SELETOR DE LINKS 
-Seletores de Link:
 
-a:link: Aplica-se a todos os links que ainda não foram visitados.
-a:visited: Aplica-se a links que já foram visitados pelo usuário.
-a:hover: Aplica-se quando o cursor do mouse está sobre um link.
-a:active: Aplica-se quando um link está sendo clicado.
-
-É possível também sem o a, colocando a class seguida de dois ponto e o efeito, exemplo main:hover
-
-Exemplo:
-
-a:visited {
-    color: antiquewhite
-}
-a:hover {
-    background-color: black;
-    color: yellow;
-    font-size: 30px;
-    margin: 5px;
-    border: solid 2px white;
-}
+/* ------------------------------------------------------------------ */
+/* --- TABELA DO INDEX, agora com display: flex e flex-wrap: wrap --- */
+/* ------------------------------------------------------------------ */
+.linha2 ul {
+    margin: 10% auto;
+    margin-top: 0;
+    margin-bottom: 0;
     
----TAMBÉM FUNCIONA COM OUTRAS DIVS, EXEMPLO, O DEBAIXO FAZ O TOPO DESAPARECER QUANDO O MOUSE ESTÁ ENCIMA--
+    width: 60%;
 
-#topo:hover {
-    display: none;
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+
+    /* é um pouco confuso e difícil de usar o box-shadow, o 2px 0 e 5px significa: deslocamento horizontal - vertical e o DESFOQUE de 5px */
+    /* rgba(0, 0, 0, 0.1) representa uma cor preta (rgb(0, 0, 0)) com uma opacidade de 0.1 (ou seja, 10% opacidade, 90% transparente) peguei no google */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.linha2 ul li {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+/* os de cima é a forma correta de usar o flex */
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* -- PRO CORPO PRINCIPAL AS PAGINAS (sobre.html e contato.html usa o .main3) ENQUANTO o (index.html usa a class .linha2) -- */
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+.main3 { /* A diferença deste pro class .linha2 é que aqui não tem o display: flex */
+    width: 60%;
+
+    margin: 10% auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+/* COMANDOS RETIRADOS ABAIXO FORAM RETIRADOS DO .main3
+.main3 {
+    margin-top: 12%;
+(usando quando se usa os position, não precisou mais do left: 0)
+    left: 0;              
+    padding: 0;
+(o margin: 10 auto é mais fácil)
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    padding-left: 3%;
+    padding-right: 10%;
 }
 */
-/* -------------PROPRIEDADE DE FONTES------------------ */
 
-/* text.decoration: none tira o risquinho debaixo */
+/* ----------------------------------------------------------------------------------------------- */
+/* ------------- PÁGINA produtos.html SE DIVIDE 2 class, .coluna1 e .tabela1 --------------------- */
+/* ----------------------------------------------------------------------------------------------- */
 
-/* font-family - Altera familia de fontes. text-transform */
+.coluna1 {
+    margin: 10% auto;
+    margin-top: 0%;      /* Espaçamento entre o MAIN e o nav */
+    margin-bottom: 20px; /* Espaçamento entre o MAIN e o rodapé */
+    width: 80%;
+
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombras para destacar a coluna */
+
+}
+/* Comandos removidos do .coluna1 abaixo
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+(OBSERVALÇÕES: só com o display: flex; fica um item na frente do outro, enquanto column deixa tudo exatamente como está, o justify-content: space-evenly destribui a mesma distancia entre os itens)
+*/
+
+/* --- TABELA COM OS PREÇOS ---- */
+
+.tabela1 {    
+    margin: 0 10% auto; /* tem outras formas de deixar centralizado, exemplo (margin-left: auto; margin-right: auto;) também funciona */
+    width: 80%; /* Largura da tabela, fica ok também sem esta sintaxe */
+    border-collapse: collapse; /* DEIXA A TABELA UNIDA NUMA COISA SÓ, sem espaço entre as cédulas, o outro é border-collapse: separate que é o padrão */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* ----- SOMBRAS DA TABELA ------ */
+    }    
+/* REMOVIDOS (abaixo) DA TABELA, ou por eu não entender ou por não fazer nada de diferente  */
+/*  .tabela1 table th td {
+    border: 99% solid black;
+    padding: 8px;
+    text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            height: 100vh;  (Para centralizar verticalmente também, se necessário /// o vh é uma unidade de medida)
+            border-collapse: collapse;  (está repetido, um só no .tabela1 já faz o serviço até onde eu testei)
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+}
+*/
+    thead {
+        background-color: #4CAF50; /* Cor de fundo dos cabeçalhos */
+        color: white; /* Cor do texto dos cabeçalhos */        
+    }
+/* removi o "th { ... } pois não faz sentido pois já existe o thead acima */
+
+    th, td {
+        border: 1px solid #ddd; /* Borda leve e cinza */
+        padding: 10px; /* Espaçamento interno das células */
+    }
+/*  Não precisa do text-align:left POIS este já é o padrão,
+    este dois comando de cima são bizarros, pois se eu aplicar eles em quaisquer outra coisa (table, tr, .tabela1) não vão funcionar e não sei pq, só funciona assim no (th, td)
+*/
+
+/* Os dois de baixo são confusos, principalmente este (tr:nth-child(even)) se tirar isto o background do tbody fica todo branco, vou deixar aí */
+
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+    }
+
+/* aqui o tr:hover funciona igual ao a:hover, mais fácil de lembrar do que o de cima */
+
+    tbody tr:hover {
+        background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    }
+
+/* Abaixo é a ultima LINHA da tabela onde está escrito: "<td colspan="6">Esses são nossos produtos</td>" */
+/* o (text-align: center) não estava funcionando, mas depois que deletei algumas coisas ele voltou a funcionar ainda não entendo o motivo */
+
+    tfoot {
+        background-color: #f4f4f4; /* Cor de fundo do rodapé */
+        text-align: center;
+        font-weight: bold; /* Negrito para o texto do rodapé */
+    }
+/* padding diferente no tfoot {...} não está funcionando */
+/* comandos removidos do tfoot > (tfoot td é redundante, pois o tfoot nesta tabela é uma linha só), e o border: none, pois não vi diferença sem, e o padding, pois já está sendo aplicado um padding nos td na tabela)
+
+
+/* ---------------------------------------------------------------------------- */
+/* --------------------- BOTÃO DE COMPRAR DA PÁGINA 2 (produtos.html) --------- */
+/* ---------------------------------------------------------------------------- */
+
+/* Prace ser algum tipo de costume usar o btn como classe pra botão */
+
+.btn-compre {
+    margin: 4px 2px;    /* Margem ao redor do botão, OBSERVAÇÃO: PODE AUMENTAR O TAMANHO DA LINHA */
+
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse sobre o botão (https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) */
+
+    padding: 8px 16px; /* Espaçamento interno do botão */
+
+
+    font-size: 14px;    /* Tamanho da fonte do botão */
+
+    border-radius: 4px; /* SEM este comando ele continua funcionando, ainda não sei pq, deve ser por causa do menu ali em cima, mas ele muda se aplicado valores diferentes no "px" */
+}
+/*  Comandos removidos abaixo, pois não estavam fazendo nada de diferente */
+/*      border: none;            (Remove a borda padrão do botão)
+        text-decoration: none;   (Remove o sublinhado do texto)        
+        display: inline-block;   (Faz o botão se comportar como um bloco inline - Não está fazendo nada de diferente)
+        
+        text-align: center; (Não está funcionando, mas funcionando se aplicado a uma ID que nem abaixo #centralizar)
+*/
+.btn-compre:hover {
+    background-color: #082e0a; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+.btn-compre:active {
+    font-size: larger;    /* ao clicar no botão a letra do clique aqui fica Maior  */
+}
+#centralizar {
+    text-align: center; /* Centraliza o texto dentro da célula */
+}
+
+
+/* ---------------------------------------- */
+/* Estilo para o parágrafo dentro do rodapé */
+/* ---------------------------------------- */
+
+/* --- --------------------------------------- ------ */
+/* --- -- FOOTER ou rodapé (SEM O flex-wrap: wrap)-- --- */
+/* --- --------------------------------------------- --- */
+
+footer {
+    box-sizing: border-box; /* SEM ESTE comando ele fica saindo pra fora do lugar (https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)*/
+
+/* Importante: Estou muito confuso sobre a parte debaixo, preciso de ajuda pra entender */
+
+    align-items: center; /* Alinha o conteúdo VERTICALMENTE ao centro */
+    display: flex; /* Usa Flexbox para layout */
+}
+/* COMANDOS REMOVIDOS ABAIXO por causa do .rodape2
+    z-index: 850;       (Se tornou desnecessário)    
+    position: relative; (Normalmente posicionado)
+    width: 100%;        (Fazia o rodapé ocupar toda a largura da página, agora não faz mais nada)    
+    justify-content: flex-start; (Alinha o conteúdo horizontalmente ao centro, agora não está fazendo mais nada)
+
+Não vi diferença com os de baixo
+        border: 0; (Remove a borda padrão)
+        bottom: 0; (Alinha o rodapé na parte inferior)
+
+Comandos importantes, mas estavam sem efeito acima, por causa da classe .rodape2
+    margin: 0px; (centralizava a barra)
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    background-color: #b17e45; (Cor de fundo)
+*/
+.rodape2 {
+    width: 80%;
+    background-color: #b17e45; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno para o conteúdo principal */
+    margin: 10% auto; /* Adiciona margem superior suficiente para evitar sobreposição */
+        margin-top: 5%;   /* Pode causar sobreposição */
+        margin-bottom:0%; /* Comando importante para rodapés */
+}
+/* COMANDOS REMOVIDOS ABAIXO por causa do .rodape2
+    position: relative;       (Se tornou desnecessário)
+    bottom: -50;
+    margin-left: 10%; (não é mais necessário por causa do margin: 10% auto;
+    border: 100px; (não vi diferença/utilidade em border até agora)
+*/
+#fundo{
+    font-size: 25px; /* Tamanho da fonte, tem que ser colocado aqui ou faz a letra dos botões grande também */
+    margin: 10% auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* COMANDO REMOVIDO ABAIXO
+    vertical-align: top; (Alinha as listas ao topo, mas NÃO ENTENDI COMO FUNCIONA)
+    
+    margin-left: 30%;
+    padding-top: 0%;
+*/
+/* -------------------------------------------------- */
+/* ----- BOTÕES DE "INICIO" E "AJUDA" do FOOTER ----- */
+/* -------------------------------------------------- */
+#nav ul li a{
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado dos links (aquela linha que fica embaixo do link) */
+    color: #ffffff; /* Cor do texto dos links */    
+    padding: 6px 6px; /* Espaçamento interno dos links */
+
+    background: rgb(0, 0, 0);
+    border-radius: 9px; /* Bordas arredondadas */
+}
+#nav ul li a:hover {
+    background-color: #55e761;
+}
+#nav ul li a:active {
+    font-size: larger;
+}
+/* COMANDO REMOVIDO ABAIXO
+    margin: 0px;    (está sem efeito) 
+*/
+
+/* ------------------------------------------ */
+/* -- FORMATAÇÃO DO FORMULÁRIO DO CONTATOS -- */
+/* ------------------------------------------ */
+
+/* o comando #mainform { height: 750px; } - Daria um tamanho pra DIV, mas não é mais necessário */
+
+
+/* COMANDOS QUE NÃO ESTÃO FAZENDO NADA ou EU NÃO SEI COMO FUNCIONA
+
+/* A DIV FIELDSET NÃO ESTÁ FAZENDO NADA
+
+fieldset {
+    border: 1px solid #ccc; 
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e7dede;
+    margin: 0;
+}
+.form-group {
+    margin-bottom: 15px; (Espaçamento ENTRE os grupos de campos)
+}
+label {
+    display: block; (faz o label ocupar a linha inteira)
+    margin-bottom: 5px; (Espaçamento abaixo do label)
+    font-weight: bold;
+}
+*/
+/* Legend é aquela palavra emcima do formulário, no html <legend>Contate-nos</legend> dentro do fieldset */ 
+.main3 legend {
+    font-size: 30px; /* Aumenta o tamanho da fonte do legend */
+    font-weight: bold; /* Negrito no legend */
+}
+/*  RETIRADO DO LEGEND (não estava funcionando)
+    margin-bottom: 100px; (Espaçamento abaixo do legend)
+*/
+
+
+/* -------- IMPORTANTE estavam em conflito com a página promoções.html -------------- */
+
+/* -- Os de baixo não entendi direito como funciona */
+
+.main3 input[type="text"],   /* https://www.w3schools.com/css/css_form.asp */
+input[type="email"],
+input[type="tel"],
+textarea, select {      
+    width: 100%;                                            /* Largura total dos campos */
+    padding: 10px;                    /* Espaçamento interno dos campos */
+    border: 1px solid #ccc;         /* Borda dos campos */
+    border-radius: 4px;               /* Bordas arredondadas dos campos */
+    font-size: 14px;                   /* Tamanho da fonte dos campos */
+
+    box-sizing: border-box;           /* Inclui padding e border na largura total */
+/* O box-sizing: border-box; permite controlar a width  https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+}
+
+/* Botões "ENVIAR" E "APAGAR" */
+/* Estão em conflito com o botton da página promoções, então coloquei .form-group antes do button */
+
+.form-group button {
+    background-color: #4CAF50; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 4px; /* Bordas arredondadas dos botões */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    font-size: 1em; /* Tamanho da fonte dos botões */
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+.form-group button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+.form-group button:active {
+    background-color: #388e3c; /* Cor de fundo ao clicar */
+    font-size: larger;
+}
+
+
+/* A PÁGINA ABAIXO ESTAVA EM CONFLITO COM A PÁGINA CONTATOS E NÃO SABIA USAR O DISPLAY: FLEX OU WRAP */
+
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+/* ----------- PÁGINA DA PROMOÇÃO --------- */
+/* ---------------------------------------- */
+
+/* ABAIXO É A DIV DE FORMULÁRIOS, DO JEITO QUE TA ABAIXO ELA FICA CENTRALIZADA */
+.form-section {
+    margin: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* --comando inutilizado----
+#promocao {
+    height: 550px;
+    align-items:normal;
+}
+*/
+/* DIV da parte de cima (oferta) com Imagem e abaixo um texto, feito usando uma tabela e ul */
+.oferta {
+    text-align: center;
+}
+.oferta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.oferta li {
+    margin: 20px 0;
+}
+.oferta img {
+    max-width: 200%;
+    height: 330px;  /* AUMENTA O TAMANHO DA IMAGEM */
+}
+.oferta span {
+    margin-top: 5px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ff0000;
+}
+/* FORMULÁRIO DA PÁGINA PROMOÇÕES, estava em conflito com a página CONTATOS, vou deixar como está, no caso o fieldset está aplicando pra ambas as páginas */
+/* Alguns destes comandos afetam tanto a página promoção quanto a página CONTATOS.HTML */
+
+.form-section {
+    margin-top: 30px;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+legend {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;         /* ESTE display: block; (está criando espaçamento entre as linhas, mas é desnecessário nestes formulários */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-section input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* BOTÕES DA PÁGINA PROMOÇÃO */
+
+.form-section button {
+    background-color: #6d4cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+}
+.form-section button:hover {
+    background-color: #fbff00;
+}
+.form-section button:active {
+    background-color: #ff0404;
+}

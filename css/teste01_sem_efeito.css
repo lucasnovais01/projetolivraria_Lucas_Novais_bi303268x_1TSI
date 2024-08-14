@@ -1,5 +1,105 @@
 /* Campo de testes CSS */
 
+/* ABAIXO O QUE ESTAVA NO estilo.css */
+
+/* NÃO ENTENDI PRA QUE SERVE O: box-sizing: border-box; e nem também NÃO entendi pra que serve o body::after = > perguntar pro CASSIO */
+
+/* NÃO SEI DIREITO O QUE ESTE BODY::after FAZ, mas parece que é depois do conteúdo do body */
+/* 
+body::after {
+    content: '';
+    display: block;
+    height: 10%; 
+  }
+TRADUÇÃO: Set same as footer's height /* 
+
+
+
+/* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
+
+/* margem do documento
+* {
+    margin: 1px;
+    padding: "";
+    box-sizing: border-box;
+    text-align: "";
+}
+/* ----- O código abaixo eu retirei, não teve serve mais agora que ta usando o display: flex
+body {
+    height: 100%; /* Garante que o html e o body ocupem a altura total da tela 
+}
+*/
+/* Como colocar CSS no header? pode ser feito pelo id, inicia com hashtag e a id */
+/* Formas de aplicar cor, background-color, pode ser colocado digitado até 17 cores em inglês, pelo hexadecimal(#000000) e pelo rgb (0,0,0) (preto por exemplo) */
+
+/* --- --------------------------------------- --- */
+/* --- ----- O estilo.css -------------------- --- */
+/* --- --------------------------------------- --- */
+
+/* -------------HEADER > este ID não está mais em uso ------------ */
+/*
+#topo {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(55,55,231,1) 71%, rgba(34,25,201,1) 100%);
+    color: red;
+    text-align: center;
+}
+#topo h1 {
+    font-size: 90px;
+}
+*/
+
+
+
+
+/* ------- NAV -------  O item abaixo está desabilitado, o consertado se chama .menu2 no tarefa.css
+
+.menu {
+    background: rgb(250,198,121);
+    background: linear-gradient(90deg, rgba(250,198,121,1) 0%, rgba(60,21,145,1) 57%, rgba(0,0,0,1) 100%);
+}
+
+*/
+
+/* --SELETOR DE LINKS 
+Seletores de Link:
+
+a:link: Aplica-se a todos os links que ainda não foram visitados.
+a:visited: Aplica-se a links que já foram visitados pelo usuário.
+a:hover: Aplica-se quando o cursor do mouse está sobre um link.
+a:active: Aplica-se quando um link está sendo clicado.
+
+É possível também sem o a, colocando a class seguida de dois ponto e o efeito, exemplo main:hover
+
+Exemplo:
+
+a:visited {
+    color: antiquewhite
+}
+a:hover {
+    background-color: black;
+    color: yellow;
+    font-size: 30px;
+    margin: 5px;
+    border: solid 2px white;
+}
+    
+---TAMBÉM FUNCIONA COM OUTRAS DIVS, EXEMPLO, O DEBAIXO FAZ O TOPO DESAPARECER QUANDO O MOUSE ESTÁ ENCIMA--
+
+#topo:hover {
+    display: none;
+}
+*/
+/* -------------PROPRIEDADE DE FONTES------------------ */
+
+/* text.decoration: none tira o risquinho debaixo */
+
+/* font-family - Altera familia de fontes. text-transform */
+
+
+
+
+
 /* Forma de fazer comentário, neste CSS, o seletor é o asterisco */
 * {
     margin:0;
@@ -12,18 +112,18 @@
 
 /* --NAV-- */
 /* Na id usasse o # + nome da id */
-
+/*
 #menu {background-color: cyan;}
-
+*/
 /* No caso de uma class, usasse o ponto + nome da class, exemplo abaixo */
-
+/*
 .destaque {
     background-color: rgb(3, 180, 3, 0.5);
 }
-
+*/
 /* Como colocar gradiente, o site https://cssgradient.io/ gera um comando de gradiente pra colocar nos eu css se vc quiser */
 /* Abaixo formas de colocar o background color no body, numa id e numa class */
-
+/*
 body {
     background-image: url(../images/livro\ 3\ modificado\ 150-230.jpg);
     background-size: cover;
@@ -38,14 +138,15 @@ body {
     width:  150px;
     height: 150px;
 }
+*/
 /* aplicando o gradiente: */
+/*
 .sobre {
     background: rgb(244,207,152);
     background: linear-gradient(90deg, rgba(244,207,152,1) 0%, rgba(145,96,21,1) 57%, rgba(0,0,0,1) 100%);
 }
-
+*/
 /* outro exemplo abaixo: */
-
 /* alterações de fonte "font-" exemplo: "font-family:Ariel" "font-size:" "font-style: oblique;"
 p {
     font-size: 30px;
