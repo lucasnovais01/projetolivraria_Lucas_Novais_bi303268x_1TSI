@@ -538,7 +538,7 @@ input[type="tel"] {
     box-sizing: border-box;
 }
 
-/* BOTÕES DA PÁGINA PROMOÇÃO */
+/* BOTÕES DA PÁGINA PROMOÇÃO, coloquei o .form-section pra parar de entrar em conflito com as outras páginas */
 
 .form-section button {
     background-color: #6d4cff;
